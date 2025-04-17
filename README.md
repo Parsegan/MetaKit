@@ -25,7 +25,6 @@
 
 ## 🖼 Preview
 
-![Preview of html-headmaster snippet](./preview.png)
 
 ## 📝 License
 

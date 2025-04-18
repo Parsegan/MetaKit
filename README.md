@@ -1,3 +1,8 @@
+![GitHub stars](https://img.shields.io/github/stars/Parsegan/MetaKit?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/Parsegan/MetaKit?style=flat-square)
+![License](https://img.shields.io/github/license/Parsegan/MetaKit?style=flat-square)
+
+
 # MetaKit. an HTML snippet. 💚💙
 
 > The ultimate HTML `<head>` starter. Built for SEO, accessibility, and real-world dev flow.
@@ -90,19 +95,34 @@ Then:
 
 ---
 
-### 🧠 What Each Field Means
+<div class="" role="region" tabindex="0">
+<table>
+    <caption>
+        <h3>🧠 What Each Field Means</h3>
+    </caption>
+    <thead>
+        <tr>
+            <th>Field</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>description</td>
+            <td>Optional name shown in the suggestion dropdown</td>
+        </tr>
+        <tr>
+            <td>prefix</td>
+            <td>The trigger word you type to activate the snippet</td>
+        </tr>
+        <tr>
+            <td>body</td>
+            <td>The actual code snippet, line-by-line</td>
+        </tr>
+    </tbody>
+</table>
+</div>
 
-| Field        | Purpose                                                                 |
-
-|--------------|-------------------------------------------------------------------------|
-
-| `description`| Optional name shown in the suggestion dropdown                         |
-
-| `prefix`     | The trigger word you type to activate the snippet                      |
-
-| `body`       | The actual code snippet, line-by-line                                  |
-
-| `scope`      | Language context (use `"html"` for HTML snippets)                      |
 
 ---
 
@@ -122,16 +142,11 @@ This guide explains what each part of `Index.html` does, referencing approximate
 
 ## 🧠 Basic HTML Structure
 
-- Lines 1--2
 
-```
 
-  ```html
-
+```html
   <!DOCTYPE html>
-
   <html lang="en" dir="ltr" translate="no">
-
 ```
 
 -   Declares the document as HTML5.
@@ -144,282 +159,201 @@ This guide explains what each part of `Index.html` does, referencing approximate
 
 * * * * *
 
-🌐 Alternate Languages
+## 🌐 Alternate Languages
 
-----------------------
 
--   Lines ~24--27
+```html
+<link rel="alternate" href="https://example.com/" hreflang="en" />
+<link rel="alternate" href="https://example.com/fr" hreflang="fr" />
+<link rel="alternate" href="https://example.com/de" hreflang="de" />
+<link rel="alternate" href="https://example.com/" hreflang="x-default" />
+```
 
-    ```
-
-    <link rel="alternate" href="https://example.com/" hreflang="en" />
-
-    <link rel="alternate" href="https://example.com/fr" hreflang="fr" />
-
-    <link rel="alternate" href="https://example.com/de" hreflang="de" />
-
-    <link rel="alternate" href="https://example.com/" hreflang="x-default" />
-
-    ```
-
-    -   Supports multilingual sites by guiding search engines to the correct version of your content.
+-   Supports multilingual sites by guiding search engines to the correct version of your content.
 
 * * * * *
 
-🧩 `<head>` Core Tags
+## 📦 Encoding and Compatibility
 
----------------------
+-
 
-### 📦 Encoding and Compatibility
+```html
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Language" content="en" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+```
 
--   Lines ~29--38
+-   UTF-8 handles all languages/symbols.
 
-    ```
+-   `viewport` makes it responsive.
 
-    <meta charset="UTF-8" />
-
-    <meta http-equiv="Content-Language" content="en" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    ```
-
-    -   UTF-8 handles all languages/symbols.
-
-    -   `viewport` makes it responsive.
-
-    -   `X-UA-Compatible` ensures compatibility with legacy IE.
+-   `X-UA-Compatible` ensures compatibility with legacy IE.
 
 * * * * *
 
-### 🔐 Security & Privacy
+* * *
 
-- 
+## 🔐 Security & Privacy
 
-    ```
+```html
+<meta http-equiv="Content-Security-Policy" content="..." />
+```
 
-    <meta http-equiv="Content-Security-Policy" content="..." />
+ *   Controls what resources can load (scripts, styles, fonts).
+     
+ *   Defends against XSS attacks.
+     
+ *   Be careful not to block important assets.
+     
 
-    ```
+* * *
 
-    -   Controls what resources can load (scripts, styles, fonts).
+## 🍎 Apple-Specific Meta
 
-    -   Defends against XSS attacks.
+```html
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+```
 
-    -   Be careful not to block important assets.
+ *   Makes the web app look full-screen on iOS.
+     
+ *   Sets status bar to blend with background.
+     
 
-* * * * *
+* * *
 
-### 🍎 Apple-Specific Meta
+## 📈 SEO & Indexing
 
-- 
+```html
+<meta name="description" content="..." />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="..." />
+```
 
-    ```
+ *   `description` appears in Google search.
+     
+ *   `robots` tells crawlers to index and follow links.
+     
+ *   `keywords` still used by some minor engines (optional).
+     
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+* * *
 
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-    ```
-
-    -   Makes the web app look full-screen on iOS.
-
-    -   Sets status bar to blend with background.
-
-* * * * *
-
-### 📈 SEO & Indexing
-
-- 
-
-    ```
-
-    <meta name="description" content="..." />
-
-    <meta name="robots" content="index, follow" />
-
-    <meta name="keywords" content="..." />
-
-    ```
-
-    -   `description` appears in Google search.
-
-    -   `robots` tells crawlers to index and follow links.
-
-    -   `keywords` still used by some minor engines (optional).
-
-* * * * *
-
-🎯 Social Sharing Metadata
-
---------------------------
+## 🎯 Social Sharing Metadata
 
 ### Open Graph (Facebook, LinkedIn, etc.)
 
--
+```html
+<meta property="og:title" content="..." />
+<meta property="og:description" content="..." />
+<meta property="og:image" content="..." />
+```
 
-    ```
-
-    <meta property="og:title" content="..." />
-
-    <meta property="og:description" content="..." />
-
-    <meta property="og:image" content="..." />
-
-    ```
-
-    -   Controls how the site appears in social media previews.
-
-    -   `og:image` should be 1200x630 px.
+ *   Controls how the site appears in social media previews.
+     
+ *   `og:image` should be 1200x630 px.
+     
 
 ### Twitter Cards
 
--
+```html
+<meta name="twitter:card" content="summary_large_image" />
+<!-- Add more Twitter-specific tags as needed -->
+```
 
-    ```
+ *   Enables large preview when sharing on Twitter.
+     
+ *   Add handle with `@YourTwitterHandle`.
+     
 
-    <meta name="twitter:card" content="summary_large_image" />
+* * *
 
-    ...
+## 👤 Author & JSON-LD Structured Data
 
-    ```
+```html
+<meta name="author" content="..." />
+<script type="application/ld+json">...</script>
+```
 
-    -   Enables large preview when sharing on Twitter.
+ *   Declares the author.
+     
+ *   JSON-LD is used by Google for rich results in search.
+     
 
-    -   Add handle with `@YourTwitterHandle`.
+* * *
 
-* * * * *
+## 🎨 Theming & Color Scheme
 
-👤 Author & JSON-LD Structured Data
+```html
+<meta name="color-scheme" content="light dark" />
+<meta name="theme-color" content="#ffffff" />
+```
 
------------------------------------
+ *   Enables proper dark/light mode rendering.
+     
+ *   Sets browser UI theme on mobile.
+     
 
--
+* * *
 
-    ```
-
-    <meta name="author" content="..." />
-
-    <script type="application/ld+json">...</script>
-
-    ```
-
-    -   Declares the author.
-
-    -   JSON-LD is used by Google for rich results in search.
-
-* * * * *
-
-🎨 Theming & Color Scheme
-
--------------------------
-
--
-
-    ```
-
-    <meta name="color-scheme" content="light dark" />
-
-    <meta name="theme-color" content="#ffffff" />
-
-    ```
-
-    -   Enables proper dark/light mode rendering.
-
-    -   Sets browser UI theme on mobile.
-
-* * * * *
-
-🧠 Performance & UX Enhancers
-
------------------------------
+## 🧠 Performance & UX Enhancers
 
 ### Fonts and Styles
 
--
+```html
+<link rel="preload" href="..." as="..." />
+<link rel="stylesheet" href="..." />
+```
 
-    ```
-
-    <link rel="preload" href="..." as="..." />
-
-    <link rel="stylesheet" href="..." />
-
-    ```
-
-    -   Preloads important assets (fonts, styles, images).
-
-    -   `rel="preload"` gives browser a heads-up.
-
-* * * * *
+ *   Preloads important assets (fonts, styles, images).
+     
+ *   `rel="preload"` gives browser a heads-up.
+     
 
 ### Icons and PWA
 
--
+```html
+<link rel="apple-touch-icon" href="..." />
+<link rel="manifest" href="/site.webmanifest" />
+```
 
-    ```
+ *   Adds favicons and PWA manifest for installable apps.
+     
 
-    <link rel="apple-touch-icon" href="..." />
+* * *
 
-    <link rel="manifest" href="/site.webmanifest" />
+## 🔠 Canonical & SEO Boost
 
-    ```
+```html
+<link rel="canonical" href="https://www.example.com" />
+```
 
-    -   Adds favicons and PWA manifest for installable apps.
+ *   Prevents SEO penalties for duplicate content.
+     
 
-* * * * *
+* * *
 
-🔠 Canonical & SEO Boost
+## ⚙️ Scripts
 
-------------------------
+```html
+<script type="module" src="..." />
+<script async src="..." />
+```
 
--
+ *   `type="module"` is modern JS.
+     
+ *   `async` speeds up load without blocking DOM.
+     
 
-    ```
+* * *
 
-    <link rel="canonical" href="https://www.example.com" />
+## 🚫 Fallback
 
-    ```
-
-    -   Prevents SEO penalties for duplicate content.
-
-* * * * *
-
-⚙️ Scripts
-
-----------
-
--
-
-    ```
-
-    <script type="module" src="..." />
-
-    <script async src="..." />
-
-    ```
-
-    -   `type="module"` is modern JS.
-
-    -   `async` speeds up load without blocking DOM.
-
-* * * * *
-
-🚫 Fallback
-
------------
-
-- 
-
-    ```
-
-    <noscript>...</noscript>
-
-    ```
-
-    -   Displays a message if JavaScript is disabled.
-
+```html
+<noscript>...</noscript>
+```
+*   Displays a message if JavaScript is disabled.
 * * * * *
 
 ## 🤝 Contributors

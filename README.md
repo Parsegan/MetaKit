@@ -2,7 +2,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/Parsegan/MetaKit?style=flat-square)
 ![License](https://img.shields.io/github/license/Parsegan/MetaKit?style=flat-square)
 
-# MetaKit. an HTML snippet. 💚💙
+# MetaKit. An HTML snippet. 💚💙
 
 > The ultimate HTML `<head>` starter. Built for SEO, accessibility, and real-world dev flow.
 

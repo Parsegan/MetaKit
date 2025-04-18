@@ -23,7 +23,15 @@
 - Multilingual SEO support
 - PWA + Apple mobile settings
 
-## 🖼 Preview
+## 🔍 Live Preview
+
+### Live preview
+
+Want to see it in action?  
+👉 [Click here to view the rendered HTML](https://htmlpreview.github.io/?https://raw.githubusercontent.com/Parsegan/MetaKit/refs/heads/main/Index.html)
+
+### Image
+!
 
 
 ## 📝 License

@@ -35,3 +35,4 @@ This project isn't just about code — it's about teaching through structure, gu
 ### 🧡 Thank You
 
 You're part of the vision now. Go build something cool.
+

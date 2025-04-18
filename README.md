@@ -124,7 +124,8 @@ Then:
 </div>
 
 
----
+
+
 
 ### ✨ Tips
 
@@ -134,14 +135,14 @@ Then:
 
 - Create variations (e.g., only OG tags or minimal SEO) using different prefixes.
 
-* * * * *
+
 
 # 📚 MetaKit: Annotated HTML Head Boilerplate
 
 This guide explains what each part of `Index.html` does, referencing approximate line numbers and the why behind them.
 
-## 🧠 Basic HTML Structure
 
+## 🧠 Basic HTML Structure
 
 
 ```html
@@ -157,7 +158,7 @@ This guide explains what each part of `Index.html` does, referencing approximate
 
 -   `translate="no"` prevents Google Translate from changing fixed UI text (e.g., navs or buttons).
 
-* * * * *
+
 
 ## 🌐 Alternate Languages
 
@@ -171,11 +172,9 @@ This guide explains what each part of `Index.html` does, referencing approximate
 
 -   Supports multilingual sites by guiding search engines to the correct version of your content.
 
-* * * * *
+
 
 ## 📦 Encoding and Compatibility
-
--
 
 ```html
 <meta charset="UTF-8" />
@@ -190,9 +189,7 @@ This guide explains what each part of `Index.html` does, referencing approximate
 
 -   `X-UA-Compatible` ensures compatibility with legacy IE.
 
-* * * * *
 
-* * *
 
 ## 🔐 Security & Privacy
 
@@ -207,7 +204,7 @@ This guide explains what each part of `Index.html` does, referencing approximate
  *   Be careful not to block important assets.
      
 
-* * *
+
 
 ## 🍎 Apple-Specific Meta
 
@@ -221,7 +218,7 @@ This guide explains what each part of `Index.html` does, referencing approximate
  *   Sets status bar to blend with background.
      
 
-* * *
+
 
 ## 📈 SEO & Indexing
 
@@ -238,7 +235,7 @@ This guide explains what each part of `Index.html` does, referencing approximate
  *   `keywords` still used by some minor engines (optional).
      
 
-* * *
+
 
 ## 🎯 Social Sharing Metadata
 
@@ -259,7 +256,30 @@ This guide explains what each part of `Index.html` does, referencing approximate
 
 ```html
 <meta name="twitter:card" content="summary_large_image" />
-<!-- Add more Twitter-specific tags as needed -->
+    <meta name="twitter:app:name:googleplay" content="" />
+    <meta name="twitter:app:url:googleplay" content="" />
+    <meta name="twitter:app:id:googleplay" content="" />
+    <meta name="twitter:app:name:iphone" content="" />
+    <meta name="twitter:app:url:iphone" content="" />
+    <meta name="twitter:app:id:iphone" content="" />
+    <meta name="twitter:app:name:ipad" content="" />
+    <meta name="twitter:app:url:ipad" content="" />
+    <meta name="twitter:app:id:ipad" content="" />
+    <meta name="twitter:site" content="@YourTwitterHandle" />
+    <meta name="twitter:creator" content="@YourTwitterHandle" />
+    <meta
+      name="twitter:title"
+      content="A.N. Author | Captivating Books & Illustrations"
+    />
+    <meta
+      name="twitter:description"
+      content="Discover captivating books and illustrations by A.N. Author. Explore genres, stories, and artwork in one immersive experience."
+    />
+    <meta name="twitter:image" content="https://www.example.com/sample.jpg" />
+    <meta
+      name="twitter:image:alt"
+      content="A preview of captivating books and illustrations by A.N. Author."
+    />
 ```
 
  *   Enables large preview when sharing on Twitter.
@@ -267,7 +287,7 @@ This guide explains what each part of `Index.html` does, referencing approximate
  *   Add handle with `@YourTwitterHandle`.
      
 
-* * *
+
 
 ## 👤 Author & JSON-LD Structured Data
 
@@ -281,7 +301,7 @@ This guide explains what each part of `Index.html` does, referencing approximate
  *   JSON-LD is used by Google for rich results in search.
      
 
-* * *
+
 
 ## 🎨 Theming & Color Scheme
 
@@ -294,8 +314,6 @@ This guide explains what each part of `Index.html` does, referencing approximate
      
  *   Sets browser UI theme on mobile.
      
-
-* * *
 
 ## 🧠 Performance & UX Enhancers
 
@@ -321,7 +339,7 @@ This guide explains what each part of `Index.html` does, referencing approximate
  *   Adds favicons and PWA manifest for installable apps.
      
 
-* * *
+
 
 ## 🔠 Canonical & SEO Boost
 
@@ -331,8 +349,6 @@ This guide explains what each part of `Index.html` does, referencing approximate
 
  *   Prevents SEO penalties for duplicate content.
      
-
-* * *
 
 ## ⚙️ Scripts
 
@@ -345,16 +361,13 @@ This guide explains what each part of `Index.html` does, referencing approximate
      
  *   `async` speeds up load without blocking DOM.
      
-
-* * *
-
 ## 🚫 Fallback
 
 ```html
 <noscript>...</noscript>
 ```
 *   Displays a message if JavaScript is disabled.
-* * * * *
+
 
 ## 🤝 Contributors
 
@@ -372,11 +385,10 @@ Whether you’re fixing typos, suggesting new tags, improving performance, or tr
 
 Check out [`CONTRIBUTING.md`](./CONTRIBUTING.md) for full guidelines.
 
----
-
 💡 All contributions are welcome—code, feedback, ideas, docs, or design.
 
 Made with ❤️ by [@Parsegan](https://github.com/Parsegan)
+
 
 ## 🔍 Preview
 

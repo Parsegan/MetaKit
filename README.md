@@ -19,13 +19,13 @@
 
 ## 🚀 How to Use
 
-1. Copy the full contents of `index.html`
+1. Copy the full contents of [THIS HTML File]([./index.html]) ✔**with comments**
 
 2. Paste it into your HTML file
 
 3. Customize content-specific fields (`title`, meta, social links, etc.)
 
-4. You can also copy content of `index.min.html` without comments
+4. You can also copy content of [THIS HTML File]([./index.min.html]) ❌**without comments**
 
 ## 🧩 Includes
 
